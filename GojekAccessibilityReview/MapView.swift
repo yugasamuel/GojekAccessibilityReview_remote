@@ -182,6 +182,10 @@ extension MapView {
                     Text("Benny Motor, Bekasi Train Station")
                     Spacer()
                 }
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel("Pickup location: Benny Motor, Bekasi Train Station")
+                .accessibilityAddTraits(.isButton)
+                .accessibilityHint("Tap to change pickup location")
                 
                 Divider()
                 
@@ -191,6 +195,10 @@ extension MapView {
                     Text("Home")
                     Spacer()
                 }
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel("Destination: Home")
+                .accessibilityAddTraits(.isButton)
+                .accessibilityHint("Tap to change destination")
             }
             .padding()
             .background(.white)
