@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		652AFCF92B1D59E600FC98DA /* BookingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652AFCF82B1D59E600FC98DA /* BookingView.swift */; };
 		652AFCFB2B1D604700FC98DA /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652AFCFA2B1D604700FC98DA /* MapView.swift */; };
+		652AFCFF2B1D93E400FC98DA /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652AFCFE2B1D93E400FC98DA /* RatingView.swift */; };
+		652AFD012B1D93EF00FC98DA /* DriverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652AFD002B1D93EF00FC98DA /* DriverView.swift */; };
 		654D006E2B1B1869008570AF /* GojekAccessibilityReviewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654D006D2B1B1869008570AF /* GojekAccessibilityReviewApp.swift */; };
 		654D00702B1B1869008570AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654D006F2B1B1869008570AF /* ContentView.swift */; };
 		654D00722B1B186A008570AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 654D00712B1B186A008570AF /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* Begin PBXFileReference section */
 		652AFCF82B1D59E600FC98DA /* BookingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingView.swift; sourceTree = "<group>"; };
 		652AFCFA2B1D604700FC98DA /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		652AFCFE2B1D93E400FC98DA /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		652AFD002B1D93EF00FC98DA /* DriverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverView.swift; sourceTree = "<group>"; };
 		654D006A2B1B1869008570AF /* GojekAccessibilityReview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GojekAccessibilityReview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		654D006D2B1B1869008570AF /* GojekAccessibilityReviewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GojekAccessibilityReviewApp.swift; sourceTree = "<group>"; };
 		654D006F2B1B1869008570AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 				654D006F2B1B1869008570AF /* ContentView.swift */,
 				652AFCF82B1D59E600FC98DA /* BookingView.swift */,
 				652AFCFA2B1D604700FC98DA /* MapView.swift */,
+				652AFD002B1D93EF00FC98DA /* DriverView.swift */,
+				652AFCFE2B1D93E400FC98DA /* RatingView.swift */,
 				654D00712B1B186A008570AF /* Assets.xcassets */,
 				654D00732B1B186A008570AF /* Preview Content */,
 			);
@@ -146,6 +152,8 @@
 				652AFCF92B1D59E600FC98DA /* BookingView.swift in Sources */,
 				652AFCFB2B1D604700FC98DA /* MapView.swift in Sources */,
 				654D00702B1B1869008570AF /* ContentView.swift in Sources */,
+				652AFCFF2B1D93E400FC98DA /* RatingView.swift in Sources */,
+				652AFD012B1D93EF00FC98DA /* DriverView.swift in Sources */,
 				654D006E2B1B1869008570AF /* GojekAccessibilityReviewApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

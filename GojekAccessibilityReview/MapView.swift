@@ -41,6 +41,27 @@ struct MapView: View {
 }
 
 extension MapView {
+    struct Service: Identifiable {
+        let id = UUID()
+        let name: String
+        let image: String
+        let duration: String
+        let maxPerson: Int
+        let price: Int
+        let discount: Int
+        
+        var totalPrice: Int {
+            return price - discount
+        }
+        
+        var totalPriceFormatted: String {
+            return NumberFormatter.localizedString(from: NSNumber(value: price - discount), number: .spellOut) + "Rupiah"
+        }
+        
+        static let example1 = Service(name: "GoRide", image: "GoRide", duration: "3-7 mins", maxPerson: 1, price: 28500, discount: 3500)
+        static let example2 = Service(name: "GoRide Comfort", image: "GoRide", duration: "3-7 mins", maxPerson: 1, price: 31000, discount: 3500)
+    }
+
     static let mapPosition = MapCameraPosition.region(
         MKCoordinateRegion(
             center: CLLocationCoordinate2D(latitude: -6.2349,
@@ -172,62 +193,41 @@ extension MapView {
             .accessibilityLabel("Order")
         }
     }
-    
-    struct PickupAndDestinationView: View {
-        var body: some View {
-            VStack {
-                HStack {
-                    Image(systemName: "arrow.up.circle.fill")
-                        .foregroundStyle(.green)
-                    Text("Benny Motor, Bekasi Train Station")
-                    Spacer()
-                }
-                .accessibilityElement(children: .ignore)
-                .accessibilityLabel("Pickup location: Benny Motor, Bekasi Train Station")
-                .accessibilityAddTraits(.isButton)
-                .accessibilityHint("Tap to change pickup location")
-                
-                Divider()
-                
-                HStack {
-                    Image(systemName: "smallcircle.filled.circle.fill")
-                        .foregroundStyle(.red)
-                    Text("Home")
-                    Spacer()
-                }
-                .accessibilityElement(children: .ignore)
-                .accessibilityLabel("Destination: Home")
-                .accessibilityAddTraits(.isButton)
-                .accessibilityHint("Tap to change destination")
-            }
-            .padding()
-            .background(.white)
-            .clipShape(RoundedRectangle(cornerRadius: 16))
-            .shadow(radius: 1)
-            .padding()
-        }
-    }
 }
 
-struct Service: Identifiable {
-    let id = UUID()
-    let name: String
-    let image: String
-    let duration: String
-    let maxPerson: Int
-    let price: Int
-    let discount: Int
-    
-    var totalPrice: Int {
-        return price - discount
+struct PickupAndDestinationView: View {
+    var body: some View {
+        VStack {
+            HStack {
+                Image(systemName: "arrow.up.circle.fill")
+                    .foregroundStyle(.green)
+                Text("Benny Motor, Bekasi Train Station")
+                Spacer()
+            }
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel("Pickup location: Benny Motor, Bekasi Train Station")
+            .accessibilityAddTraits(.isButton)
+            .accessibilityHint("Tap to change pickup location")
+            
+            Divider()
+            
+            HStack {
+                Image(systemName: "smallcircle.filled.circle.fill")
+                    .foregroundStyle(.red)
+                Text("Home")
+                Spacer()
+            }
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel("Destination: Home")
+            .accessibilityAddTraits(.isButton)
+            .accessibilityHint("Tap to change destination")
+        }
+        .padding()
+        .background(.white)
+        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .shadow(radius: 1)
+        .padding()
     }
-    
-    var totalPriceFormatted: String {
-        return NumberFormatter.localizedString(from: NSNumber(value: price - discount), number: .spellOut) + "Rupiah"
-    }
-    
-    static let example1 = Service(name: "GoRide", image: "GoRide", duration: "3-7 mins", maxPerson: 1, price: 28500, discount: 3500)
-    static let example2 = Service(name: "GoRide Comfort", image: "GoRide", duration: "3-7 mins", maxPerson: 1, price: 31000, discount: 3500)
 }
 
 #Preview {
