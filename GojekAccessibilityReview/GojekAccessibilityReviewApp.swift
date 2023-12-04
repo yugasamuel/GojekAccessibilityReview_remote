@@ -12,6 +12,7 @@ struct GojekAccessibilityReviewApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+//            BookingView()
         }
     }
 }

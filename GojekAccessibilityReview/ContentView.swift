@@ -31,8 +31,8 @@ struct ContentView: View {
                 .offset(y: -70)
         }
         .accessibilityElement(children: .ignore)
-        .accessibilityAddTraits(.isButton)
         .accessibilityLabel("GoRide, up to 30k discount")
+        .accessibilityAddTraits(.isButton)
     }
 }
 

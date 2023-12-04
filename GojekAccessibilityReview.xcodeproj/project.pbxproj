@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		652AFCF92B1D59E600FC98DA /* BookingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652AFCF82B1D59E600FC98DA /* BookingView.swift */; };
 		654D006E2B1B1869008570AF /* GojekAccessibilityReviewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654D006D2B1B1869008570AF /* GojekAccessibilityReviewApp.swift */; };
 		654D00702B1B1869008570AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654D006F2B1B1869008570AF /* ContentView.swift */; };
 		654D00722B1B186A008570AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 654D00712B1B186A008570AF /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		652AFCF82B1D59E600FC98DA /* BookingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingView.swift; sourceTree = "<group>"; };
 		654D006A2B1B1869008570AF /* GojekAccessibilityReview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GojekAccessibilityReview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		654D006D2B1B1869008570AF /* GojekAccessibilityReviewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GojekAccessibilityReviewApp.swift; sourceTree = "<group>"; };
 		654D006F2B1B1869008570AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				654D006D2B1B1869008570AF /* GojekAccessibilityReviewApp.swift */,
 				654D006F2B1B1869008570AF /* ContentView.swift */,
+				652AFCF82B1D59E600FC98DA /* BookingView.swift */,
 				654D00712B1B186A008570AF /* Assets.xcassets */,
 				654D00732B1B186A008570AF /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				652AFCF92B1D59E600FC98DA /* BookingView.swift in Sources */,
 				654D00702B1B1869008570AF /* ContentView.swift in Sources */,
 				654D006E2B1B1869008570AF /* GojekAccessibilityReviewApp.swift in Sources */,
 			);
