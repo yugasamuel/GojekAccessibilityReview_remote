@@ -144,6 +144,7 @@ extension MapView {
                         Image(systemName: "checkmark.seal.fill")
                             .foregroundStyle(.green)
                         Text("Rp \(service.discount) discount")
+                            .font(.subheadline)
                     }
                     .fontWeight(.semibold)
                     .padding(.vertical, 4)
