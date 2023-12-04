@@ -25,7 +25,7 @@ struct BookingView: View {
         .accessibilityElement(children: .ignore)
         .accessibilityLabel("Book GoRide & KRL ticket in one order")
         .accessibilityAddTraits(.isButton)
-        .accessibilityHint("Tap to open new screen to enter promo code")
+        .accessibilityHint("Tap to enter a promo code in a new screen")
     }
 }
 
