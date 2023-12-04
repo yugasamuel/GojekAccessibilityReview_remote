@@ -22,7 +22,7 @@ struct DriverView: View {
             VStack {
                 DriverProfileView(driver: Driver.example)
             }
-            .presentationDetents([.fraction(0.45), .fraction(0.75)])
+            .presentationDetents([.fraction(0.25), .fraction(0.75)])
             .presentationBackgroundInteraction(.enabled)
             .presentationDragIndicator(.visible)
             .interactiveDismissDisabled()
