@@ -80,7 +80,7 @@ extension DriverView {
             }
             .padding()
             .accessibilityElement(children: .ignore)
-            .accessibilityLabel("Driver's license plate is: \(driver.licensePlate), driver's name is \(driver.name), rating: \(driver.rating)")
+            .accessibilityLabel("Driver's license plate is: \(driver.licensePlate), Driver's name is \(driver.name), Rating: \(driver.rating)")
         }
     }
 }

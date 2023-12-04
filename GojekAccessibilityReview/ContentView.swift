@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             Button(action: {
-                // opens GoRide
+                // opens GoRide booking view
             }, label: {
                 VStack {
                     Image("GoRide")
