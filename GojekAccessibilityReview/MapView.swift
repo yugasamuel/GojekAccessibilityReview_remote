@@ -23,7 +23,7 @@ struct MapView: View {
         .sheet(isPresented: .constant(true)) {
             VStack {
                 ForEach(MapView.services) { service in
-                    CardView(service)
+                    ServiceCardView(service)
                         .onTapGesture {
                             selectedService = service
                         }
@@ -73,7 +73,7 @@ extension MapView {
     
     static let services = [Service.example1, Service.example2]
     
-    struct CardView: View {
+    struct ServiceCardView: View {
         let service: Service
         
         init(_ service: Service) {

@@ -13,9 +13,9 @@ struct GojekAccessibilityReviewApp: App {
         WindowGroup {
 //            ContentView()
 //            MapView()
-//            BookingView()
+            BookingView()
 //            DriverView()
-            RatingView()
+//            RatingView()
         }
     }
 }
