@@ -69,14 +69,12 @@ extension MapView {
                 VStack {
                     HStack {
                         Text(service.name)
-                            .font(.title3)
                             .fontWeight(.semibold)
                         Spacer()
                         HStack(spacing: 4) {
                             Image(systemName: "checkmark.seal.fill")
                                 .foregroundStyle(.green)
-                            Text("Rp\(service.price - service.discount)")
-                                .font(.title3)
+                            Text("Rp\(service.totalPrice)")
                                 .fontWeight(.semibold)
                         }
                     }
@@ -92,6 +90,7 @@ extension MapView {
                         }
                         Spacer()
                         Text("Rp\(service.price)")
+                            .font(.subheadline)
                             .foregroundStyle(.secondary)
                             .strikethrough()
                     }
@@ -99,6 +98,8 @@ extension MapView {
             }
             .padding(.horizontal)
             .padding(.bottom, 16)
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel("Is selected: \(service.name), price is \(service.totalPriceFormatted), estimated arrive \(service.duration)")
         }
     }
     
@@ -153,7 +154,7 @@ extension MapView {
                             
                             Spacer()
                             
-                            Text("Rp\(service.price - service.discount)")
+                            Text("Rp\(service.totalPrice)")
                                 .fontWeight(.semibold)
                             Image(systemName: "arrow.forward.circle.fill")
                                 .font(.title2)
@@ -167,6 +168,8 @@ extension MapView {
                 }
             }
             .padding(.horizontal, 12)
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel("Order")
         }
     }
     
@@ -206,6 +209,14 @@ struct Service: Identifiable {
     let maxPerson: Int
     let price: Int
     let discount: Int
+    
+    var totalPrice: Int {
+        return price - discount
+    }
+    
+    var totalPriceFormatted: String {
+        return NumberFormatter.localizedString(from: NSNumber(value: price - discount), number: .spellOut) + "Rupiah"
+    }
     
     static let example1 = Service(name: "GoRide", image: "GoRide", duration: "3-7 mins", maxPerson: 1, price: 28500, discount: 3500)
     static let example2 = Service(name: "GoRide Comfort", image: "GoRide", duration: "3-7 mins", maxPerson: 1, price: 31000, discount: 3500)
