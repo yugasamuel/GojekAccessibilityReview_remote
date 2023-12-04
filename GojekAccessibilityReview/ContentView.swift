@@ -9,13 +9,30 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            Button(action: {
+                // opens GoRide
+            }, label: {
+                VStack {
+                    Image("GoRide")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 120)
+                    Text("GoRide")
+                        .font(.title3)
+                        .foregroundStyle(.black)
+                }
+            })
+            
+            Image("-30k")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 120)
+                .offset(y: -70)
         }
-        .padding()
+        .accessibilityElement(children: .ignore)
+        .accessibilityAddTraits(.isButton)
+        .accessibilityLabel("GoRide, up to 30k discount")
     }
 }
 
