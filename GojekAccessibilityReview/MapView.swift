@@ -23,10 +23,11 @@ struct MapView: View {
         .sheet(isPresented: .constant(true)) {
             VStack {
                 ForEach(MapView.services) { service in
-                    ServiceCardView(service)
-                        .onTapGesture {
-                            selectedService = service
-                        }
+                    Button(action: {
+                        selectedService = service
+                    }, label: {
+                        ServiceCardView(service)
+                    })
                 }
                 
                 OrderInteractionView(service: $selectedService)
@@ -117,6 +118,7 @@ extension MapView {
                     }
                 }
             }
+            .foregroundStyle(.black)
             .padding(.horizontal)
             .padding(.bottom, 16)
             .accessibilityElement(children: .ignore)
